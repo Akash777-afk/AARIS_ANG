@@ -1,0 +1,112 @@
+<div class="loginpage">
+  <div class="loginpage2">
+    <img class="green-minimalist-olive-oil-org" src="\assets\Green Minimalist Olive Oil Organic Label Landscape (1) 2.png" alt="background" />
+
+    <div class="loginpage-inner">
+      <div class="frame-wrapper">
+        <form class="frame-parent" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+          <div class="welcome-back-parent">
+            <div class="welcome-back-container">
+              <span>Welcome </span>
+              <span class="back">back !</span>
+            </div>
+            <div class="to-aaris-dashboard">to AARIS dashboard</div>
+          </div>
+
+          <div class="group-parent">
+            <div class="group-wrapper">
+              <div class="frame-container">
+                <div class="group-container">
+                  <div class="email-address-wrapper">
+                    <div class="email-address">Email Address</div>
+                  </div>
+                  <div class="frame-div" [class.focused]="emailFocused">
+                    <div class="line-mdemail-parent">
+                      <img class="line-mdemail-icon" src="\assets\line-md_email.svg" alt="email icon" />
+                      <input
+                        type="email"
+                        class="input-field"
+                        formControlName="email"
+                        placeholder="Enter your Email Address"
+                        (focus)="emailFocused = true"
+                        (blur)="emailFocused = false"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="group-parent2">
+              <div class="password-wrapper">
+                <div class="email-address">Password</div>
+              </div>
+              <div class="frame-wrapper2" [class.focused]="passwordFocused">
+                <div class="frame-group">
+                  <div class="line-mdemail-parent">
+                    <img class="line-mdemail-icon" src="\assets\uil_lock.svg" alt="password icon" />
+                    <input
+                      [type]="showPassword ? 'text' : 'password'"
+                      class="input-field"
+                      formControlName="password"
+                      placeholder="Enter your Password"
+                      (focus)="passwordFocused = true"
+                      (blur)="passwordFocused = false"
+                    />
+                  </div>
+                  <img
+                    class="line-mdemail-icon eye-icon"
+                    src="\assets\iconamoon_eye.svg"
+                    alt="toggle visibility"
+                    (click)="showPassword = !showPassword"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="frame-parent2">
+              <div class="rectangle-parent">
+                <div class="frame-child"></div>
+                <div class="enter-your-email">Remember me</div>
+              </div>
+              <div class="forgot-password">Forgot password ?</div>
+            </div>
+
+            <div class="group-div">
+              <button type="submit" class="sign-in-wrapper" [disabled]="loginForm.invalid">
+                <div class="sign-in">Sign in</div>
+              </button>
+            </div>
+
+            <div class="frame-wrapper3">
+              <div class="line-parent">
+                <div class="frame-item"></div>
+                <div class="or-continue-with-parent">
+                  <div class="or-continue-with">Or continue with</div>
+                  <div class="group-parent3">
+                    <div class="frame-wrapper4">
+                      <div class="frame-wrapper5">
+                        <div class="devicongoogle-parent">
+                          <img class="devicongoogle" src="\assets\devicon_google.svg" alt="Google icon" />
+                          <div class="enter-your-email">Google account</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="frame-wrapper6">
+                      <div class="icoutline-apple-parent">
+                        <img class="icoutline-apple-icon" src="\assets\ic_outline-apple.svg" alt="Apple icon" />
+                        <div class="enter-your-email">ios account</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
